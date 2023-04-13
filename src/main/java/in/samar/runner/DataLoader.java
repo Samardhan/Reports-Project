@@ -17,15 +17,15 @@ public class DataLoader implements ApplicationRunner {
 
 	@Autowired
 	private PersonPlanRepo repo;
-	
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		
-		
+
+		/*
 		repo.deleteAll();
-		
-		//Food
-		PersonPlan p1=new PersonPlan();
+
+		// Food
+		PersonPlan p1 = new PersonPlan();
 		p1.setPersonName("samar");
 		p1.setGender("male");
 		p1.setPlanName("Food");
@@ -33,16 +33,15 @@ public class DataLoader implements ApplicationRunner {
 		p1.setStartDate(LocalDate.now().minusWeeks(5));
 		p1.setEndDate(LocalDate.now().plusYears(2).plusMonths(5));
 		p1.setBenifitAmt(65830.86);
-		
-		PersonPlan p2=new PersonPlan();
+
+		PersonPlan p2 = new PersonPlan();
 		p2.setPersonName("samanwai");
 		p2.setGender("male");
 		p2.setPlanName("Food");
 		p2.setPlanStatus("Denied");
 		p2.setDeniedReason("No Intrest");
-		
-		
-		PersonPlan p3=new PersonPlan();
+
+		PersonPlan p3 = new PersonPlan();
 		p3.setPersonName("vaishu");
 		p3.setGender("Female");
 		p3.setPlanName("Food");
@@ -52,9 +51,9 @@ public class DataLoader implements ApplicationRunner {
 		p3.setBenifitAmt(6000.50);
 		p3.setTerminatedDate(LocalDate.now().plusDays(1));
 		p3.setTerminatedReason("Employeed");
-		
-		//Cash
-		PersonPlan p4=new PersonPlan();
+
+		// Cash
+		PersonPlan p4 = new PersonPlan();
 		p4.setPersonName("Babbul");
 		p4.setGender("male");
 		p4.setPlanName("Cash");
@@ -62,16 +61,15 @@ public class DataLoader implements ApplicationRunner {
 		p4.setStartDate(LocalDate.now().minusMonths(8));
 		p4.setEndDate(LocalDate.now().plusYears(3).plusMonths(6));
 		p4.setBenifitAmt(15296.23);
-		
-		PersonPlan p5=new PersonPlan();
+
+		PersonPlan p5 = new PersonPlan();
 		p5.setPersonName("manu");
 		p5.setGender("Female");
-		p5.setPlanName("Cah");
+		p5.setPlanName("Cash");
 		p5.setPlanStatus("Denied");
 		p5.setDeniedReason("No Info");
-		
-		
-		PersonPlan p6=new PersonPlan();
+
+		PersonPlan p6 = new PersonPlan();
 		p6.setPersonName("Mintu");
 		p6.setGender("male");
 		p6.setPlanName("cash");
@@ -81,10 +79,9 @@ public class DataLoader implements ApplicationRunner {
 		p6.setBenifitAmt(9583.02);
 		p6.setTerminatedDate(LocalDate.now());
 		p6.setTerminatedReason("Un-Employeed");
-		
-		
-		//Medical
-		PersonPlan p7=new PersonPlan();
+
+		// Medical
+		PersonPlan p7 = new PersonPlan();
 		p7.setPersonName("Chinnu");
 		p7.setGender("male");
 		p7.setPlanName("Medical");
@@ -92,16 +89,15 @@ public class DataLoader implements ApplicationRunner {
 		p7.setStartDate(LocalDate.now());
 		p7.setEndDate(LocalDate.now().plusYears(2));
 		p7.setBenifitAmt(80528.00);
-		
-		PersonPlan p8=new PersonPlan();
+
+		PersonPlan p8 = new PersonPlan();
 		p8.setPersonName("sony");
 		p8.setGender("Female");
 		p8.setPlanName("Medical");
 		p8.setPlanStatus("Denied");
 		p8.setDeniedReason("Govt job");
-		
-		
-		PersonPlan p9=new PersonPlan();
+
+		PersonPlan p9 = new PersonPlan();
 		p9.setPersonName("Sravs");
 		p9.setGender("Female");
 		p9.setPlanName("Medical");
@@ -111,10 +107,9 @@ public class DataLoader implements ApplicationRunner {
 		p9.setBenifitAmt(7514.50);
 		p9.setTerminatedDate(LocalDate.now().plusDays(1));
 		p9.setTerminatedReason("Un-Employeed");
-		
-		
-		//Employement
-		PersonPlan p10=new PersonPlan();
+
+		// Employement
+		PersonPlan p10 = new PersonPlan();
 		p10.setPersonName("sahaja");
 		p10.setGender("Female");
 		p10.setPlanName("Employement");
@@ -122,16 +117,15 @@ public class DataLoader implements ApplicationRunner {
 		p10.setStartDate(LocalDate.now().minusMonths(4));
 		p10.setEndDate(LocalDate.now().plusYears(6).plusMonths(4));
 		p10.setBenifitAmt(5447.45);
-		
-		PersonPlan p11=new PersonPlan();
+
+		PersonPlan p11 = new PersonPlan();
 		p11.setPersonName("Babbu");
 		p11.setGender("male");
 		p11.setPlanName("Employement");
 		p11.setPlanStatus("Denied");
 		p11.setDeniedReason("No-Education");
-		
-		
-		PersonPlan p12=new PersonPlan();
+
+		PersonPlan p12 = new PersonPlan();
 		p12.setPersonName("Ashok");
 		p12.setGender("male");
 		p12.setPlanName("Employement");
@@ -141,13 +135,12 @@ public class DataLoader implements ApplicationRunner {
 		p12.setBenifitAmt(6000.50);
 		p12.setTerminatedDate(LocalDate.now());
 		p12.setTerminatedReason("Employeed");
-		
-		
-		List<PersonPlan> list = Arrays.asList(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
-		
+
+		List<PersonPlan> list = Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+
 		repo.saveAll(list);
-		
-		
+
+*/
 	}
 
 }

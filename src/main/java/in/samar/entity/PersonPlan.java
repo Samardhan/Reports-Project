@@ -26,5 +26,5 @@ public class PersonPlan {
 	private String deniedReason;
 	private LocalDate terminatedDate;
 	private String terminatedReason;
-	
+
 }
