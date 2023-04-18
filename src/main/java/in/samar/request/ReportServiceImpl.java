@@ -2,7 +2,9 @@ package in.samar.request;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import in.samar.entity.PersonPlan;
@@ -36,8 +38,28 @@ public class ReportServiceImpl implements ReportService {
 
 	@Override
 	public List<PersonPlan> search(Searchrequest req) {
+
+		PersonPlan entity = new PersonPlan();
+
+		if (null != req.getPlanName() && "".equals(getPlanNames())) {
+
+			entity.setPlanName(req.getPlanName());
+
+		}
+
+		if (null != req.getPlanStatus() && "".equals(getPlanStatus())) {
+
+			entity.setPlanName(req.getPlanStatus());
+
+		}
 		
-		return repo.findAll();
+		if(null != req.getGender() && "".equals(getGender())) {
+			
+			entity.setGender(req.getGender());
+			
+			}
+
+		return repo.findAll(Example.of(entity));
 	}
 
 	@Override

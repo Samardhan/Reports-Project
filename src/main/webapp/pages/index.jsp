@@ -83,7 +83,8 @@
 			<tbody>
 				<c:forEach items="${plans}" var="plan" varStatus="in"> 
 				<tr>
-					<td>${plan.personId}</td>
+				<!-- <td>${plan.personId}</td> -->
+					<td>${in.count}</td>
 					<td>${plan.personName}</td>
 					<td>${plan.gender}</td>
 					<td>${plan.planName}</td>
