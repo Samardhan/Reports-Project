@@ -22,7 +22,7 @@ public class DataLoader implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 
 		/*
-		repo.deleteAll();
+		// repo.deleteAll();
 
 		// Food
 		PersonPlan p1 = new PersonPlan();
@@ -141,6 +141,6 @@ public class DataLoader implements ApplicationRunner {
 		repo.saveAll(list);
 
 */
-	}
+}
 
 }

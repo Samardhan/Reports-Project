@@ -2,6 +2,8 @@ package in.samar.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import in.samar.entity.PersonPlan;
 import in.samar.request.Searchrequest;
 
@@ -15,8 +17,8 @@ public interface ReportService {
 
 	public List<PersonPlan> search(Searchrequest req);
 
-	public void exportExcel();
+	public boolean exportExcel(HttpServletResponse response) throws Exception;
 
-	public void exportPdf();
+	public boolean exportPdf(HttpServletResponse response)throws Exception;
 
 }
