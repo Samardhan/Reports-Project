@@ -9,6 +9,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
+import in.samar.constants.AppConstants;
+
 @Component
 public class EmailUtils {
 	
@@ -17,7 +19,7 @@ public class EmailUtils {
 	
 	public String sendmail(String to,String subject , String body,File f) {
 		
-		String send="not Sent";
+		
 		
 		try {
 
@@ -31,16 +33,17 @@ public class EmailUtils {
 			
 			mail.send(mmsg);
 			
-			send="mail sent";
+			return AppConstants.MAIL_SENT;
 			
 		} catch (Exception e) {
-			send="Not Sent";
+			
 			e.printStackTrace();
+			
 		}
 		
 		
 		
-		return send;
+		return AppConstants.MAIL_NOT_SENT;
 	}
 
 }

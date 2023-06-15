@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import in.samar.entity.PersonPlan;
 import in.samar.request.Searchrequest;
 import in.samar.service.ReportService;
-import in.samar.util.EmailUtils;
 
 @Controller
 public class ReportController {
@@ -21,13 +20,10 @@ public class ReportController {
 	@Autowired
 	private ReportService service;
 
-	@Autowired
-	private EmailUtils email;
-
 	@PostMapping("/search")
 	public String handleSearch(Searchrequest search, Model model) {
 
-		System.out.println(search);
+		
 
 		List<PersonPlan> data = service.search(search);
 		model.addAttribute("plans", data);

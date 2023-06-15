@@ -5,25 +5,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
-
-import com.lowagie.text.Document;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfTable;
-import com.lowagie.text.pdf.PdfWriter;
 
 import in.samar.entity.PersonPlan;
 import in.samar.repo.PersonPlanRepo;
@@ -50,20 +36,18 @@ public class ReportServiceImpl implements ReportService {
 	@Override
 	public List<String> getPlanNames() {
 
-		List<String> planNames = repo.getPlanNames();
-		return planNames;
+		
+		return repo.getPlanNames();
 	}
 
 	@Override
 	public List<String> getPlanStatus() {
-		List<String> planStatus = repo.getPlanStatus();
-		return planStatus;
+		return repo.getPlanStatus();
 	}
 
 	@Override
 	public List<String> getGender() {
-		List<String> gender = repo.getGender();
-		return gender;
+		return repo.getGender();
 	}
 
 	@Override
@@ -74,7 +58,7 @@ public class ReportServiceImpl implements ReportService {
 		if (null != req.getPlanName() && !"".equals(req.getPlanName())) {
 
 			entity.setPlanName(req.getPlanName());
-			System.out.println();
+			
 
 		}
 
